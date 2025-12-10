@@ -197,3 +197,46 @@ li .text {
     border-radius: 4px;
     font-size: 1em;
 }
+
+
+
+@media screen and (max-width: 600px) {
+    
+    /* Overall Container Adjustment */
+    /* English: Remove max-width limit so the list can fill the entire screen width on mobile. */
+    .to-do-list {
+        max-width: 100%;
+        margin: 0 10px; /* Add slight margin on sides */
+        padding: 15px;
+    }
+
+    /* List Item Adjustment (Buttons) */
+    /* English: Change the list item display to wrap elements if needed. */
+    li {
+        flex-wrap: wrap; /* Allows text and buttons to move to the next line if space is tight */
+        padding: 10px;
+    }
+
+    /* Task Text Adjustment */
+    /* English: Ensure the task text doesn't take up the whole width, leaving space for buttons. */
+    .text {
+        font-size: 1em;
+        margin-bottom: 10px; /* Space between text and buttons when wrapped */
+        flex-basis: 100%; /* Allows the text to take its own line */
+    }
+
+    /* Button Group Adjustment */
+    /* English: Style for Delete/Move/Edit buttons to be side-by-side on a separate line. */
+    li button {
+        font-size: 0.9em;
+        padding: 8px 10px;
+        margin-left: 5px; /* Reduce spacing between buttons */
+        margin-bottom: 0; 
+    }
+    
+    /* Input and Add Button Adjustment */
+    /* English: Adjust the padding for the input and add button for better touch target size. */
+    input[type="text"], .add-button {
+        padding: 12px 10px; 
+    }
+}
