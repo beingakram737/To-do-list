@@ -1,17 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+// index.js (Corrected Code)
 
+// 1. Import React.
+import React from 'react';
+
+// 2. Import ReactDOM from the correct path 'react-dom/client'.
+import ReactDOM from 'react-dom/client'; 
+
+// 3. Import the main ToDoList component (which is named ToDoList in App.js).
+import ToDoList from './App'; // Note: Changed 'App' to 'ToDoList' for clarity
+
+// 4. Import the global CSS file
+import './index.css'; 
+
+// Get the root element from the HTML file (public/index.html)
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+// Render the App component inside the root element
 root.render(
   <React.StrictMode>
-    <App />
+    <ToDoList /> {/* Using ToDoList here */}
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// End of index.js
